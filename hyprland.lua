@@ -1,5 +1,3 @@
-hl.env("HYPRLAND_CONFIG", "~/.config/hypr/hyprland.lua")
-
 require("config.wm_binds")
 require("config.app_binds")
 require("config.window_rules")
