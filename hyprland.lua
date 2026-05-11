@@ -2,6 +2,7 @@ require("config.wm_binds")
 require("config.app_binds")
 require("config.window_rules")
 require("config.random_env")
+require("config.looks")
 
 hl.on("hyprland.start", function()
 	for _, cmd in ipairs(require("config.autostart")) do
@@ -26,36 +27,13 @@ hl.config({
 		accel_profile = "flat",
 	},
 	general = {
-
-		gaps_in = 0,
-		gaps_out = 0,
-		border_size = 2,
-		col = {
-			active_border = "rgba(c0caf5bb)",
-			inactive_border = "rgba(595959aa)",
-		},
-
-		layout = "dwindle",
-
 		-- Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
 		allow_tearing = true,
-	},
-	decoration = {
-		rounding = 1,
-
-		blur = {
-			enabled = false,
-		},
-
-		shadow = {
-			enabled = false,
-		},
 	},
 	render = {
 		ctm_animation = 1,
 	},
 	misc = {
-		force_default_wallpaper = 0,
 		vrr = 1,
 		mouse_move_enables_dpms = true,
 		key_press_enables_dpms = true,
