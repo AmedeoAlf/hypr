@@ -39,4 +39,7 @@ hl.config({
 		key_press_enables_dpms = true,
 		middle_click_paste = false,
 	},
+	cursor = {
+		zoom_rigid = false,
+	},
 })

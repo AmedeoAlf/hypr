@@ -72,8 +72,12 @@ hl.bind(
 )
 
 -- Zoom
-hl.bind("SUPER + mouse:275", hl.dsp.exec_cmd("~/.config/hypr/zoom.py 0.2 1"))
-hl.bind("SUPER + mouse:276", hl.dsp.exec_cmd("~/.config/hypr/zoom.py 0.2"))
+hl.bind("SUPER + mouse:275", function()
+	hl.config({ cursor = { zoom_factor = 1 } })
+end)
+hl.bind("SUPER + mouse:276", function()
+	hl.config({ cursor = { zoom_factor = tonumber(hl.get_config("cursor.zoom_factor")) * 1.41 } })
+end)
 
 -- Nostalgia
 hl.bind("ALT + TAB", hl.dsp.window.cycle_next())
