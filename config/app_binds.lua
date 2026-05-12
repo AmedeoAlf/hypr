@@ -7,7 +7,7 @@ local binds = {
 
 	C = "~/.config/wofi/copyq.sh",
 	B = "zen-browser",
-	E = "pcmanfm-qt",
+	E = "dolphin",
 	["SHIFT + E"] = "smile",
 }
 
