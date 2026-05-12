@@ -1,8 +1,7 @@
 local binds = {
 	Return = "foot",
 
-	D = "rofi -show drun -show-icons",
-	["SHIFT + D"] = "rofi -show run",
+	D = "hyprlauncher",
 
 	Z = "wlogout -c 10 -L 300 -R 300 -B 435 -T 435 -b 6",
 
