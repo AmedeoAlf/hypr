@@ -1,4 +1,4 @@
-return {
+local programs = {
 	"hyprlauncher -d",
 	"waybar",
 	"udiskie",
@@ -7,3 +7,9 @@ return {
 	"hyprsunset",
 	"copyq --start-server",
 }
+
+hl.on("hyprland.start", function()
+	for _, cmd in ipairs(programs) do
+		hl.exec_cmd(cmd)
+	end
+end)
