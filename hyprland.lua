@@ -5,4 +5,14 @@ require("config.looks")
 require("config.default")
 require("config.autostart")
 
-require("device")
+local get_hostname = function()
+	local f = io.popen("hostnamectl hostname")
+	if f == nil then
+		return ""
+	end
+	local hostname = f:read("l")
+	f:close()
+	return hostname
+end
+
+require(get_hostname())
