@@ -24,3 +24,7 @@ hl.monitor({
 	output = "",
 	mode = "1920x1080@100",
 })
+
+hl.on("hyprland.start", function()
+	hl.exec_cmd("waybar")
+end)
