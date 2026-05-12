@@ -46,17 +46,24 @@ hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Audio
-hl.bind(
-	"XF86AudioRaiseVolume",
-	hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioLowerVolume",
-	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
-	{ locked = true, repeating = true }
-)
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
+-- TODO: brightness
+local sliderKeys = {
+	XF86AudioRaiseVolume = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+	XF86AudioLowerVolume = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-",
+}
+
+-- TODO: MicMute, next/prev, play-pause
+local specialKeys = {
+	XF86AudioMute = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+}
+
+for combo, cmd in pairs(sliderKeys) do
+	hl.bind(combo, hl.dsp.exec_cmd(cmd), { repeating = true, locked = true })
+end
+
+for combo, cmd in pairs(specialKeys) do
+	hl.bind(combo, hl.dsp.exec_cmd(cmd), { locked = true })
+end
 
 -- Screenshot
 hl.bind(
@@ -81,4 +88,4 @@ end)
 
 -- Nostalgia
 hl.bind("ALT + TAB", hl.dsp.window.cycle_next())
-hl.bind("ALT + SHIFT + TAB", hl.dsp.window.cycle_next({ nextt = false }))
+hl.bind("ALT + SHIFT + TAB", hl.dsp.window.cycle_next({ next = false }))
