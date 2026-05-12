@@ -1,7 +1,9 @@
 return {
+	"hyprlauncher -d",
 	"waybar",
+	"udiskie",
 	"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
 	"hyprpaper",
-	"hyprshade auto",
+	"hyprsunset",
 	"copyq --start-server",
 }

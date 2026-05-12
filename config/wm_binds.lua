@@ -2,7 +2,7 @@ local super_binds = {
 	Q = hl.dsp.window.kill(),
 	M = hl.dsp.exit(),
 	V = hl.dsp.window.float(),
-	F = hl.dsp.window.float(),
+	F = hl.dsp.window.fullscreen(),
 	P = hl.dsp.window.pseudo(),
 
 	H = hl.dsp.focus({ direction = "l" }),
