@@ -13,20 +13,16 @@ hl.config({
 			disable_while_typing = false,
 		},
 	},
-	general = {
-		-- Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
-		allow_tearing = true,
-	},
-	render = {
-		ctm_animation = 1,
-	},
+
+	general = { allow_tearing = true },
+	render = { ctm_animation = 1 },
+	xwayland = { force_zero_scaling = true },
+	cursor = { zoom_rigid = false },
+
 	misc = {
 		vrr = 1,
 		mouse_move_enables_dpms = true,
 		key_press_enables_dpms = true,
 		middle_click_paste = false,
-	},
-	cursor = {
-		zoom_rigid = false,
 	},
 })
