@@ -19,3 +19,8 @@ local vars = {
 for var, value in pairs(vars) do
 	hl.env(var, value)
 end
+
+hl.monitor({
+	output = "",
+	mode = "1920x1080@100",
+})

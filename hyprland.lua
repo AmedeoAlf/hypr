@@ -1,19 +1,15 @@
 require("config.wm_binds")
 require("config.app_binds")
 require("config.window_rules")
-require("config.random_env")
 require("config.looks")
+
+require("device")
 
 hl.on("hyprland.start", function()
 	for _, cmd in ipairs(require("config.autostart")) do
-		hl.exec_cmd(cmd, {})
+		hl.exec_cmd(cmd)
 	end
 end)
-
-hl.monitor({
-	output = "",
-	mode = "1920x1080@100",
-})
 
 hl.config({
 	input = {
