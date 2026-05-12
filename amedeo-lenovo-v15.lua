@@ -13,10 +13,8 @@ local function rebind(combo, dispatcher)
 	hl.bind(combo, dispatcher)
 end
 
--- TODO: more graceful logout
 rebind("SUPER + apostrophe", function()
-	hl.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-	hl.exec_cmd("uwsm stop")
+	hl.exec_cmd("hyprshutdown --post-cmd 'uwsm stop'")
 end)
 
 rebind("SUPER + B", hl.dsp.exec_cmd("helium-browser"))
