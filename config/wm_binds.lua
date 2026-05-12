@@ -1,5 +1,5 @@
 local super_binds = {
-	Q = hl.dsp.window.kill(),
+	Q = hl.dsp.window.close(),
 	apostrophe = hl.dsp.exit(),
 	V = hl.dsp.window.float(),
 	F = hl.dsp.window.fullscreen(),
@@ -17,7 +17,7 @@ local super_binds = {
 }
 
 local super_shift_binds = {
-	Q = hl.dsp.exec_raw("hyprctl kill"),
+	Q = hl.dsp.window.kill(),
 
 	S = hl.dsp.focus({ workspace = "special" }),
 

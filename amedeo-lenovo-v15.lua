@@ -4,6 +4,8 @@ hl.monitor({
 	scale = "1.25",
 })
 
+hl.config({ input = { sensitivity = 0 } })
+
 ---@param combo string
 ---@param dispatcher HL.Dispatcher|function
 local function rebind(combo, dispatcher)
@@ -13,6 +15,7 @@ end
 
 -- TODO: more graceful logout
 rebind("SUPER + apostrophe", function()
+	hl.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 	hl.exec_cmd("uwsm stop")
 end)
 

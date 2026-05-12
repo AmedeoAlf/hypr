@@ -27,4 +27,7 @@ hl.monitor({
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
+	hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
 end)
+
+hl.config({ input = { sensitivity = -0.4 } })

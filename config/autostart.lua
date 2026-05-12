@@ -1,7 +1,6 @@
 local programs = {
 	"hyprlauncher -d",
 	"udiskie",
-	"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
 	"hyprpaper",
 	"hyprsunset",
 	"copyq --start-server",
