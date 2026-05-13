@@ -45,16 +45,23 @@ end
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
--- Audio
--- TODO: brightness
+-- Audio/brightness keys
 local sliderKeys = {
-	XF86AudioRaiseVolume = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
-	XF86AudioLowerVolume = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-",
+	XF86AudioRaiseVolume = "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+	XF86AudioLowerVolume = "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+
+	XF86MonBrightnessUp = "brightnessctl -e4 -n2 set 5%+",
+	XF86MonBrightnessDown = "brightnessctl -e4 -n2 set 5%-",
 }
 
--- TODO: MicMute, next/prev, play-pause
 local specialKeys = {
-	XF86AudioMute = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	XF86AudioMute = "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+	XF86AudioMicMute = "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+
+	XF86AudioNext = "playerctl next",
+	XF86AudioPause = "playerctl play-pause",
+	XF86AudioPlay = "playerctl play-pause",
+	XF86AudioPrev = "playerctl previous",
 }
 
 for combo, cmd in pairs(sliderKeys) do
