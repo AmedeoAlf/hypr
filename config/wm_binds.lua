@@ -19,7 +19,7 @@ local super_binds = {
 local super_shift_binds = {
 	Q = hl.dsp.window.kill(),
 
-	S = hl.dsp.focus({ workspace = "special" }),
+	S = hl.dsp.window.move({ workspace = "special" }),
 
 	L = function()
 		hl.timer(function()
