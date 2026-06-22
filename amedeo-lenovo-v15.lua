@@ -4,7 +4,7 @@ hl.monitor({
 	scale = "1.25",
 })
 
-hl.config({ input = { sensitivity = 0 } })
+hl.config({ input = { sensitivity = 1, accel_profile = "flat" } })
 
 ---@param combo string
 ---@param dispatcher HL.Dispatcher|function
