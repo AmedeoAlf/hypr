@@ -1,7 +1,7 @@
 ---@type HL.WindowRuleSpec[]
 local M = {
 	{
-		match = { initial_title = "^packettracer6.exe$" },
+		match = { title = "[Pp]acket *[tT]racer" },
 		suppress_event = "fullscreen maximize activate activatefocus",
 	},
 }
