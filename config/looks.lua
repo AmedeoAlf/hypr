@@ -27,8 +27,8 @@ hl.config({
 	},
 })
 
-hl.curve("fast", { type = "spring", mass = 1, stiffness = 20, dampening = 10 })
-hl.curve("slow", { type = "spring", mass = 1, stiffness = 10, dampening = 10 })
+hl.curve("fast", { type = "spring", mass = 1, stiffness = 80, dampening = 20 })
+hl.curve("slow", { type = "spring", mass = 1, stiffness = 40, dampening = 10 })
 
 hl.animation({ leaf = "windows", spring = "fast", enabled = true, speed = 1, style = "slide" })
 hl.animation({ leaf = "windowsMove", spring = "slow", enabled = true, speed = 1 })
