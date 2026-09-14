@@ -14,4 +14,4 @@ for combo, cmd in pairs(binds) do
 	hl.bind("SUPER + " .. combo, hl.dsp.exec_cmd(cmd))
 end
 
-hl.bind("SUPER_L", require("config.multiclick")(hl.dsp.exec_cmd("hyprlauncher"), 3, 200))
+hl.bind("SUPER_L", require("config.multiclick")(hl.dsp.exec_cmd("hyprlauncher"), 3))
