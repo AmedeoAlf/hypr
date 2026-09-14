@@ -14,6 +14,8 @@ local super_binds = {
 
 	mouse_down = hl.dsp.focus({ workspace = "-1" }),
 	mouse_up = hl.dsp.focus({ workspace = "+1" }),
+
+	N = require("config.toggle_waybar_hide"),
 }
 
 local super_shift_binds = {
