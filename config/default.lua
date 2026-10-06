@@ -8,6 +8,7 @@ hl.config({
 		follow_mouse = 1,
 		sensitivity = -0.4,
 		accel_profile = "flat",
+		force_no_accel = false,
 		touchpad = {
 			natural_scroll = true,
 			disable_while_typing = false,

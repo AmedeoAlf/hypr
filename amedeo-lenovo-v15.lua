@@ -8,7 +8,7 @@ hl.monitor({
 	mode = "1280x720",
 })
 
-hl.config({ input = { sensitivity = 1, accel_profile = "flat" } })
+hl.config({ input = { sensitivity = 0.3, force_no_accel = true } })
 
 ---@param combo string
 ---@param dispatcher HL.Dispatcher|function
