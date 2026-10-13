@@ -4,6 +4,7 @@ require("config.window_rules")
 require("config.looks")
 require("config.default")
 require("config.autostart")
+require("config.hypr3d")
 
 local get_hostname = function()
 	local f = io.popen("hostnamectl hostname")
