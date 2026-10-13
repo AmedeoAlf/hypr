@@ -1,6 +1,7 @@
 if hl.plugin.hypr3d then
 	local hypr3d = hl.plugin.hypr3d
 	hypr3d.config({
+		world = { grid = false },
 		input = {
 			typing_cursor = true,
 			typing_button = "side",
