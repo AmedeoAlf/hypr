@@ -9,7 +9,7 @@ local vars = {
 	SDL_VIDEODRIVER = "wayland",
 	CLUTTER_BACKEND = "wayland",
 
-	QT_QPA_PLATFORMTHEME = "hyprqt6engine",
+	QT_QPA_PLATFORMTHEME = "qt6ct",
 	QT_WAYLAND_DISABLE_WINDOWDECORATION = "1",
 	QT_QPA_PLATFORM = "wayland;xcb",
 
