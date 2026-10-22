@@ -1,5 +1,8 @@
 if hl.plugin.hypr3d then
 	local hypr3d = hl.plugin.hypr3d
+
+	hl.bind("SUPER + SHIFT + R", hypr3d.toggle)
+
 	hypr3d.config({
 		world = { grid = false },
 		input = {

@@ -22,3 +22,5 @@ rebind("SUPER + apostrophe", function()
 end)
 
 rebind("SUPER + B", hl.dsp.exec_cmd("helium-browser"))
+
+hl.exec_cmd("nm-applet --indicator")
